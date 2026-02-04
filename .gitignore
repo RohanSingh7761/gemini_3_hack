@@ -1,0 +1,68 @@
+# Basic .gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+pip-wheel-metadata/
+*.egg-info/
+
+# Java / JVM
+*.class
+*.jar
+*.war
+*.ear
+target/
+build/
+
+# .NET / Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+bin/
+obj/
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.iml
+*.workspace
+*.swp
+*~
+
+# Build / distribution
+dist/
+build/
+
+# Environment variables
+.env
+.env.*.local
+
+# Temporary / cache
+.cache/
+.tmp/
+npm-packages/
+.DS_Store
+
+# Optional: coverage reports
+coverage/
+coverage-final.json
