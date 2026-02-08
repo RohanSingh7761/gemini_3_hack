@@ -63,6 +63,9 @@ build/
 npm-packages/
 .DS_Store
 
+# Local testing files
+.last-phone.txt
+
 # Optional: coverage reports
 coverage/
 coverage-final.json
