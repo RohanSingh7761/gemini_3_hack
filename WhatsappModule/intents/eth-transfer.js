@@ -4,12 +4,15 @@ import fs from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import crypto from "crypto";
-import 'dotenv/config';
+import dotenv from 'dotenv';
 
 // Get local phone file path
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const LOCAL_PHONE_FILE = join(__dirname, '.last-phone.txt');
+
+// Load .env from WhatsappModule folder
+dotenv.config({ path: join(__dirname, '..', '.env') });
 
 // Alchemy provider endpoint
 const ALCHEMY_URL = process.env.ALCHEMY_URL;

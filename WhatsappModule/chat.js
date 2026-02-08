@@ -8,6 +8,7 @@ import { handleSwapAndSendOnChain } from './intents/swap-and-send-on-chain.js';
 import { handleSwapAndSendCrossChain } from './intents/swap-and-send-cross-chain.js';
 import { handleOtherMisc } from './intents/other-misc.js';
 import { handleOtherTrash } from './intents/other-trash.js';
+import { ensLookup } from './intents/ens-lookup.js';
 import readline from 'readline';
 
 const rl = readline.createInterface({
@@ -55,6 +56,9 @@ function askQuestion() {
                     break;
                 case 'eth-transfer':
                     await handleEthTransfer(response.to, response.amount, response.ens);
+                    break;
+                case 'ens-lookup':
+                    await ensLookup(response.ensName || response.name || response.ens);
                     break;
                 case 'erc-20-transfer':
                     await handleErc20Transfer(response.token, response.to, response.amount);
