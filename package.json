@@ -2,8 +2,10 @@
   "type": "module",
   "dependencies": {
     "@google/genai": "^1.40.0",
+    "@uniswap/v4-sdk": "^1.27.0",
     "cors": "^2.8.6",
     "dotenv": "^17.2.4",
+    "ethers": "^6.16.0",
     "express": "^5.2.1",
     "mime": "^4.1.0",
     "qrcode-terminal": "^0.12.0",

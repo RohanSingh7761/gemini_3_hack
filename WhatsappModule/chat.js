@@ -72,7 +72,7 @@ function askQuestion() {
                     await handleOtherTrash();
                     break;
                 default:
-                    console.log('⚠ Unknown intent:', response.intent);
+                    console.log('Unknown intent:', response.intent);
             }
             
         } catch (error) {
