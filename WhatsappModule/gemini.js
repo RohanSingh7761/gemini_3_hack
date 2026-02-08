@@ -17,13 +17,13 @@ Based on the intent you will provide a json object in output in following format
 If 'create-wallet':
 {
     intent: "",
-    message: something about Creating a wallet for you in different tones
+    message: something about Creating a wallet for you in different tones, the private key and mnemonic are generated so explain what they are and to delete them after message
 }
 
 If 'check-balance':
 {
     intent: "",
-    message: something like you have this much, in different tones
+    message: Here is your current balance:
 }
 
 If 'inr-transac':
