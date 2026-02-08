@@ -32,11 +32,12 @@ If 'inr-transac':
     message: Sorry not supported yet but more respectful tone
 }
 
-If 'eth-tranfer':
+If 'eth-transfer':
 {
     intent: ,
     to: address of receiver,
     amount: address to send in wei (convert from given eth in text)
+    ens: true/false (if to is an ens or address)
 }
 
 If 'erc-20-transfer':

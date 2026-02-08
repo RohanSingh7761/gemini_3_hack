@@ -54,7 +54,7 @@ function askQuestion() {
                     await handleInrTransaction();
                     break;
                 case 'eth-transfer':
-                    await handleEthTransfer(response.to, response.amount);
+                    await handleEthTransfer(response.to, response.amount, response.ens);
                     break;
                 case 'erc-20-transfer':
                     await handleErc20Transfer(response.token, response.to, response.amount);
