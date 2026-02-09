@@ -49,16 +49,16 @@ function askQuestion() {
                     await handleCreateWallet();
                     break;
                 case 'check-balance':
-                    await handleCheckBalance();
+                    await handleCheckBalance(response.network);
                     break;
                 case 'inr-transac':
                     await handleInrTransaction();
                     break;
                 case 'eth-transfer':
-                    await handleEthTransfer(response.to, response.amount, response.ens);
+                    await handleEthTransfer(response.to, response.amount, response.ens, response.network);
                     break;
                 case 'ens-lookup':
-                    await ensLookup(response.ensName || response.name || response.ens);
+                    await ensLookup(response.ensName || response.name || response.ens, response.network);
                     break;
                 case 'erc-20-transfer':
                     await handleErc20Transfer(response.token, response.to, response.amount);

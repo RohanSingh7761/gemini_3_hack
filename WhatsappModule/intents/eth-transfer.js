@@ -109,12 +109,14 @@ export async function handleEthTransfer(to, amount, ens = false, network = "main
         const decryptedKey = decryptPrivateKey(wallet.encrypted_private_key);
         const signer = new Wallet(decryptedKey, provider);
         
-        // 6. Resolve ENS if needed
+        // 6. Resolve ENS if needed (always use mainnet for ENS resolution)
         let recipientAddress = to;
         if (ens) {
-            console.log(`🔍 Resolving ENS name: ${to}`);
+            console.log(`🔍 Resolving ENS name: ${to} (using mainnet ENS registry)`);
             try {
-                const resolvedAddress = await provider.resolveName(to);
+                // Always use mainnet provider for ENS resolution since that's where ENS names are registered
+                const ensProvider = new JsonRpcProvider(ALCHEMY_URL);
+                const resolvedAddress = await ensProvider.resolveName(to);
                 
                 if (!resolvedAddress) {
                     console.log('❌ ENS name could not be resolved.');
